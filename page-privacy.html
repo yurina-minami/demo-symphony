@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="”robots”" content="”noindex”" />
+    <!--検索非表示-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ザ・シンフォニーホール The Symphony Hall</title>
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--游ゴシック-->
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "rgu3nym",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/main.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <a href="index.html"
+          ><img
+            src="assets/img/header/logo-gd.png"
+            alt="ザ・シンフォニーホール The Symphony Hall"
+        /></a>
+      </h1>
+
+      <nav>
+        <ul>
+          <li>
+            <a class="nav-ticket"
+              ><img src="assets/img/header/nav-icon1.png" alt="" />
+              <p>チケット</p></a
+            >
+          </li>
+          <li>
+            <a class="nav-event"
+              ><img src="assets/img/header/nav-icon2.png" alt="" />
+              <p>公演</p></a
+            >
+          </li>
+          <li>
+            <a href="page-access.html"
+              ><img src="assets/img/header/nav-icon3.png" alt="" />
+              <p>アクセス</p></a
+            >
+          </li>
+          <li>
+            <a href="page-faq.html"
+              ><img src="assets/img/header/nav-icon4.png" alt="" />
+              <p>FAQ</p></a
+            >
+          </li>
+          <li>
+            <a class="nav-other"
+              ><img src="assets/img/header/nav-icon5.png" alt="" />
+              <p>その他</p></a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!--開閉メニュー（チケット）-->
+      <div class="menu menu-ticket">
+        <div class="nav-close">
+          <img src="assets/img/header/close.png" alt="" />
+        </div>
+
+        <div class="title">
+          <img src="assets/img/header/menu-icon1.png" alt="" />
+          <p>チケット</p>
+        </div>
+
+        <ul class="wrapper">
+          <li><a href="">ログインしてWEBで購入</a></li>
+          <li><a href="">新規会員登録はこちら</a></li>
+          <li><a href="page-how.html">チケット購入方法</a></li>
+        </ul>
+      </div>
+
+      <!--開閉メニュー（公演）-->
+      <div class="menu menu-event">
+        <div class="nav-close">
+          <img src="assets/img/header/close.png" alt="" />
+        </div>
+
+        <div class="title">
+          <img src="assets/img/header/menu-icon2.png" alt="" />
+          <p>公演</p>
+        </div>
+
+        <ul class="wrapper">
+          <li><a href="archive-event.html">公演一覧から探す</a></li>
+          <li><a href="page-calendar.html">カレンダーから探す</a></li>
+        </ul>
+      </div>
+
+      <!--開閉メニュー（その他）-->
+      <div class="menu menu-other">
+        <div class="nav-close">
+          <img src="assets/img/header/close.png" alt="" />
+        </div>
+
+        <div class="title">
+          <p>その他</p>
+        </div>
+
+        <ul class="wrapper">
+          <li><a href="archive-news.html">お知らせ</a></li>
+          <li><a href="page-seat.html">座席表</a></li>
+          <li><a href="page-rental.html">貸館ご利用について</a></li>
+          <li><a href="">ログイン・新規会員登録</a></li>
+          <li><a href="page-lp.html">当ホールの魅力</a></li>
+          <li><a href="archive-blog.html">ブログ</a></li>
+          <li><a href="archive-pdf.html">会報誌PDF</a></li>
+        </ul>
+
+        <div class="footer-nav wrapper">
+          <a href="page-company.html">会社概要</a>
+          <a href="page-contact.html">お問い合わせ</a>
+          <a href="page-sitemap.html">サイトマップ</a>
+          <a href="page-barrierfree.html">バリアフリー</a>
+          <a href="page-privacy.html">プライバシーポリシー</a>
+        </div>
+
+        <div class="sns-nav wrapper">
+          <a href=""><img src="assets/img/header/sns-youtube.png" alt="" /></a>
+          <a href=""><img src="assets/img/header/sns-x.png" alt="" /></a>
+          <a href=""><img src="assets/img/header/sns-tiktok.png" alt="" /></a>
+          <a href=""><img src="assets/img/header/sns-fb.png" alt="" /></a>
+        </div>
+      </div>
+    </header>
+
+    <main id="page-privacy">
+      <div class="subpage-title">
+        <h2 class="wrapper">
+          <span class="en">Privacy Policy</span><br />
+          <span class="ja">プライバシーポリシー</span>
+        </h2>
+      </div>
+
+      <div class="wrapper">
+        <p>
+          （株）ザ・シンフォニーホールは、ユーザーのみなさまに関する情報を正確かつ安全に取り扱うことを最優先とし、個人情報保護法および関連ガイドライン等に基づき｢プライバシーポリシー｣を定め役員、職員のすべてがこれを遵守することをお約束いたします。<br />
+        </p>
+
+        <a href="https://www.truste.or.jp/hssl/validate/01314.php">
+          <img src="assets/img/privacy.png" alt="" />
+        </a>
+
+        <p>
+          ◆TRUSTeのミッションは、公正な情報使用の促進によって、ユーザーのインターネットに対する信用と信頼を築く事です。このウェブサイトは、皆様のプライバシー情報に対する公約を実施するため、その情報使用について開示する事に同意し、また公約の遵守のためにTRUSTeによってその情報使用の実態を調査されることに同意しています。またTRUSTeマークを掲示する事により､このウェブサイトは下記のことについて皆様に通知することに同意しています。<br />
+          <br />
+          1.どのような個人特定情報或いは第三者の個人特定情報がこのウェブサイトを通じて皆様方から収集されているかについて<br />
+          2.それらの情報を収集している組織について<br />
+          3.それらの情報がどのように使われているかについて<br />
+          4.それらの情報は誰と共有されているかについて<br />
+          5.それらの情報の収集、使用及び配信に関し、皆様方がどのような選択をできるのかについて<br />
+          6.「（株）ザ・シンフォニーホール」のコントロール下で、それら情報の紛失、誤使用、改変を防ぐ為にどのような種類の保安手順がとられているかについて<br />
+          7.皆様に関する情報ので、正しくない部分をいかに修正できるかについて<br />
+          <br />
+          皆様方は､（株）ザ・シンフォニーホールが、掲示したプライバシーポリシーを守っていないと感ずる場合、まず（株）ザ・シンフォニーホールの下記のお問い合わせ先に連絡してください。更に皆様方が、その問い合わせを受け取った旨の連絡を受けなかったり、問い合わせが満足に対応されなかった場合は、TRUSTeにご連絡ください。その際TRUSTeは、ウェブサイトとの連絡役として、皆様方の問い合わせにお応えすべく活動します。
+        </p>
+
+        <h3>個人情報収集と使用</h3>
+        <p>
+          （株）ザ・シンフォニーホールは、このプライバシーポリシーに開示されている内容と異なった方法で個人情報を収集したり、第三者と情報を共有したり提供したりしません。また、収集した個人情報に関して、第三者からの情報を補足するようなことは行っていません。<br />
+          <br />
+          ・シンフォニア会員登録<br />
+          （株）ザ・シンフォニーホールは、このプライバシーポリシーに開示されている内容と異なった方法で個人情報を収集したり、第三者と情報を共有したり提供したりしません。また、収集した個人情報に関して、第三者からの情報を補足するようなことは行っていません。<br />
+          <br />
+          ・メ－ルマガジン配信<br />
+          当ウェブサイトでは会員登録の際、メールマガジンの受信申し込みが出来ます。また、配信がご不要になった場合は、登録解除フォーム、郵便、eMailなどでいつでも配信停止手続きが可能です。<br />
+          <br />
+          ・お問い合わせ<br />
+          当ウェブサイトユーザーの皆様は、ウェブサイト上のお問い合わせフォームをご利用いただけます。この際、連絡先情報（名前･eMailアドレス）を（株）ザ・シンフォニーホールにご提示いただきます。これらの情報は、お問い合わせへの回答のために使用されるだけで、それ以外に使用されることはありません。<br />
+          <br />
+          ・クッキーについて<br />
+          本ウェブサイトでは、クッキーと呼ばれるテキストファイルをユーザーのPCに送付し、ウェブサイトの利用状況の把握・分析等に使用しますが、ユーザー個人を識別するための情報を収集することはありません。なお、クッキーの使用を許可するかどうかはユーザーPCのウェブブラウザで設定できます。必要に応じて設定をご確認ください。<br />
+          <br />
+          ・ログ・ファイルについて<br />
+          本ウェブサイトではウェブサイトの管理､ユーザーの動向の分析などに使用する為の幅広い統計的情報収集に関してログファイルを使用しますが、これらは
+          個人情報にはリンクされません。また、同様の目的で第三者のプログラムを使用しアクセス解析を行っていますが、ここでも個人情報の収集や特定を行うことはありません。
+        </p>
+
+        <h3>リンク</h3>
+        <p>
+          本ウェブサイトは他のウェブサイトへのリンクを含んでいますが、（株）ザ・シンフォニーホールは他のウェブサイトによる個人情報の取扱には責任を持ちません。このプライバシーポリシーは（株）ザ・シンフォニーホールによって収集される情報だけに適用されます。個人情報を収集する全てのリンク先ウェブサイトのプライバシーポリシーにも目を通される事をお薦めします。
+        </p>
+
+        <h3>情報の共有</h3>
+        <p>
+          会報誌の発送等を外部会社へ委託する場合には、個人情報の保護が十分に図られている企業を選定し（株）ザ・シンフォニーホールと同様
+          の情報管理を行うことを契約により義務づけ、また必要な目的の範囲内で必要な情報のみを開示し、それ以外の目的での情報の使用を禁止するなど万全の対策を
+          講じた上で行います。
+          会員登録後、お客様が登録内容を利用して公演チケットを購入された場合、興行主催者が公演中止及び延期等お客様への連絡が必要と判断したときは、興行主催者とお客様の情報を共有する場合がございます。あらかじめご了承ください。
+        </p>
+
+        <h3>情報の安全管理</h3>
+        <p>
+          （株）ザ・シンフォニーホールはユーザーの個人情報を正確かつ最新の状態に保ち、不正アクセス、紛失、破壊、改ざんおよび漏えいなどを防止するための合理的な措置を講じています。ユーザーがオンラインで情報を提示される場合、これらの情報を保護するために暗号化通信(SSL)を使用し、一方､オフラインでも個人情報保護委員会・個人情報管理責任者による適切な保護・管理を行うなどユーザー情報保護のため万全の体制を整えています。
+          更に､（株）ザ・シンフォニーホールの全ての職員に対し、個人情報の重要性を認識し情報保護を実践する為に、定期的な教育研修が実施されます。
+        </p>
+
+        <h3>法律に定められた情報の開示</h3>
+        <p>
+          （株）ザ・シンフォニーホールは、ご本人の同意なしに第三者への情報提供は行いませんが、法律に基づき開示が求められた場合、個人情報を政府、地方自治体、裁判所、又は国際的な法執行機関に対して開示することがあります。
+        </p>
+
+        <h3>個人情報の開示・修正・利用停止</h3>
+        <p>
+          ユーザーがご自身の個人情報について照会される場合や情報に変更がある場合（例えば住所）あるいは､（株）ザ・シンフォニーホールのサービスを望まなくなった場合には、（株）ザ・シンフォニーホールはユーザーから提供された個人情報を開示、修正・更新し､或いは利用を停止いたします。このようなお申し出は､下記「～お問い合わせ～個人情報保護担当」宛のe-mail・電話・郵便で行っていただけます。なお、情報の照会、訂正等のお申し出をいただく場合、お申し出された方がご本人様かどうかの確認をさせていただく場合がございます。
+        </p>
+
+        <h3>個人情報の取り扱いの変更</h3>
+        <p>
+          （株）ザ・シンフォニーホールがプライバシーポリシーを変更する場合には､この変更についてウェブサイト上に掲載します。
+          （株）ザ・シンフォニーホールは､情報が収集されたときのプライバシーポリシーに応じてその情報を使用しますが、当初情報が収集された時点で述べたものとは異なった方法で個人情報を使用するような場合にはウェブサイトに掲載し事前にお知らせます。このような変更を了解するかどうかの選択権はユーザーの皆様方が有しており、了解できない場合は下記「お問い合わせ」先までお申し出ください。
+        </p>
+
+        <div class="contact">
+          <a class="button" href="page-contact.html">お問い合わせ</a>
+
+          <p>
+            （株）ザ・シンフォニーホール 個人情報保護担当<br />
+            Tel：06-6453-1010 / FAX：06-6453-1700<br />
+            メールアドレス：info@symphonyhall.jp<br />
+            営業時間：10:00～18:00 ※土日祝日除く
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <a id="scroll-top">Top</a>
+
+      <img src="assets/img/index/logo-icon.png" alt="" />
+
+      <ul>
+        <li><a href="page-company.html">会社概要</a></li>
+        <li><a href="page-contact.html">お問い合わせ</a></li>
+        <li><a href="page-sitemap.html">サイトマップ</a></li>
+        <li><a href="page-barrierfree.html">バリアフリー</a></li>
+        <li><a href="page-barrierfree.html">プライバシーポリシー</a></li>
+      </ul>
+
+      <small>Copyright &copy; The Symphony Hall All rights reserved</small>
+    </footer>
+  </body>
+</html>

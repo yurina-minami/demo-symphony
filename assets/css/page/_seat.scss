@@ -1,0 +1,255 @@
+@charset "UTF-8";
+@use "../foundation/var";
+@use "../foundation/mixin";
+
+#page-seat {
+    .intro {
+        @include mixin.tab {
+            width: 80%;
+            margin: auto;
+        }
+
+        @include mixin.pc {
+            width: 50%;
+        }
+    }
+
+    .flex {
+        @include mixin.tab {
+            width: 60%;
+            margin-left: 20%;
+        }
+
+        @include mixin.pc {
+            width: 100%;
+            margin-left: 0;
+            display: flex;
+            justify-content: space-between;
+
+            .first, .second, .third {
+                width: 30%;
+            }
+        }
+    }
+
+    h3 {
+        text-align: center;
+        font-size: 24px;
+        margin: 60px 0 10px;
+    }
+    
+    //ボタン共通
+    ul li {
+        display: inline-block;
+        border-radius: 50%;
+        background-color: white;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        font-size: 24px;
+        padding-top: 5px;
+        position: absolute;
+    }
+
+    .first {
+        position: relative;
+        padding: 20px;
+        
+
+        h3 {
+            color: #D33131;
+        }
+
+        ul li {
+            border: solid 1px #D33131;
+            color: #D33131;
+        }
+
+        .a,.b,.c {
+            top: 50%;
+        }
+
+        .d,.e,.f {
+            top: 75%;
+        }
+
+        .a,.d {
+            left: 15%;
+        }
+
+        .b,.e {
+            left: calc(50% - 30px);
+        }
+
+        .c,.f {
+            right: 15%;
+        }
+    }
+
+    .second {
+        position: relative;
+        padding: 20px;
+
+        h3 {
+            color: #82C639;
+        }
+
+        ul li {
+            border: solid 1px #82C639;
+            color: #82C639;
+        }
+
+        .g {
+            top: 25%;
+            left: calc(50% - 30px);
+        }
+
+        .h,.i {
+            top: 40%;
+        }
+
+        .j,.k {
+            top: 60%;
+        }
+
+        .l,.m {
+            top: 80%;
+        }
+
+        .h,.j {
+            left: 0;
+        }
+
+        .i,.k {
+            right: 0;
+        }
+
+        .l {
+            left: 25%;
+        }
+
+        .m {
+            right: 25%;
+        }
+    }
+
+    .third {
+        position: relative;
+        padding: 20px;
+
+        h3 {
+            color: #22A0C6;
+        }
+
+        ul li {
+            border: solid 1px #22A0C6;
+            color: #22A0C6;
+        }
+
+        .n,.o {
+            top: 40%;
+        }
+
+        .p,.q {
+            top: 70%;
+        }
+
+        .n,.p {
+            left: 10%;
+        }
+
+        .o,.q {
+            right: 10%;
+        }
+    }
+
+    .barrierfree {
+        border: solid 1px var.$gold;
+        padding: 20px;
+        margin-top: 50px;
+
+        h4 {
+            text-align: center;
+            font-size: 18px;
+        }
+
+        p {
+            margin: 10px 0;
+            line-height: 1.5;
+        }
+
+        @include mixin.pc {
+            text-align: center;
+        }
+    }
+
+    /*---- モーダルウィンドウ ----*/
+    .bg-gray {
+        background-color: rgba(128, 128, 128, 0.5);
+        width: 100%;
+        height: 100vh;
+        padding: 20px;
+        overflow: scroll;
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        display: none;
+
+        @include mixin.tab {
+            padding: 50px 20px;
+        }
+
+        &.active {
+            display: block;
+            animation: opacityAnime .5s forwards;
+        }
+
+        @keyframes opacityAnime{
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .modal-window {
+            background-color: white;
+            padding: 50px;
+            text-align: center;
+            position: relative;
+
+            @include mixin.tab {
+                width: 400px;
+                margin: auto;
+            }
+
+            .seat-close {
+                width: 30px;
+                height: 30px;
+                position: absolute;
+                top: 30px;
+                right: 30px;
+            }
+
+            .seat-detail {
+                display: none;
+
+                &.active {
+                    display: block;
+                }
+
+                h4 {
+                    font-size: 24px;
+                }
+
+                img {
+                    border: solid 1px gray;
+                }
+            } 
+        }
+    }
+
+
+    
+}

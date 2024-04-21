@@ -1,0 +1,189 @@
+@charset "UTF-8";
+@use "../foundation/var";
+@use "../foundation/mixin";
+
+header {
+    position: fixed;
+    z-index: 50;
+    width: 100%;
+    max-height: 100vh;
+    overflow: scroll;
+    background-color: var.$red;
+    opacity: 0;
+    animation: headerAnime 2s forwards;
+    animation-delay: 3s;
+
+    @keyframes headerAnime{
+        0% {
+          opacity: 0;
+          transform: translateY(-100px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      
+
+    h1 {
+        height: 60px;
+        border-bottom: solid 1px var.$gold;
+        text-align: center;
+
+        img {
+            width: 200px;
+        }
+    }
+
+    /*ヘッダーナビ*/
+    nav {
+        border-bottom: solid 1px var.$gold;
+
+        ul {
+            display: flex;
+            padding: 10px 0;
+
+            @include mixin.pc {
+                width: 600px;
+                margin: auto;
+            }
+
+            li {
+                width: 20%;
+                border-right: solid 1px var.$gold;
+
+                &:last-child {
+                    border-right: none;
+                }
+
+                a {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    gap: 5px;
+
+                    @include mixin.tab {
+                        flex-direction: row;
+                        gap: 10px;
+                    }
+
+                    img {
+                        width: auto;
+                        height: 24px;
+                    }
+    
+                    p {
+                        font-size: 14px;
+                        line-height: 14px;
+
+                        @include mixin.tab {
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*開閉メニュー共通CSS*/
+    .menu {
+        
+        padding: 30px 0 50px;
+        position: relative;
+        
+        .nav-close {
+            width: 30px;
+            height: 30px;
+            position: absolute;
+            top: 30px;
+            right: 30px;
+        }
+        
+        .title {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+
+            img {
+                width: auto;
+                height: 30px;
+            }
+
+            p {
+                color: white;
+                font-size: 24px;
+            }
+        }
+
+        @include mixin.tab {
+            ul {   
+                width: 90%;
+                display: flex;
+                gap: 2%;
+                flex-wrap: wrap;
+
+                li {
+                    width: 49%;
+                }
+            }
+        }
+
+        @include mixin.pc {
+            ul {
+                display: flex;
+                gap: 2%;
+                flex-wrap: wrap;
+    
+                li {
+                    width: 32%;
+                }
+            }
+        }
+
+        .footer-nav {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            column-gap: 20px;
+            row-gap: 10px;
+            padding: 30px 0 20px;
+        }
+
+        .sns-nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+
+            img {
+                width: 50px;
+            }
+        }
+    }
+
+    /*開閉メニュークリックでの表示*/
+    .menu-ticket {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    .menu-event {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+
+    .menu-other {
+        display: none;
+
+        &.active {
+            display: block;
+        }
+    }
+}

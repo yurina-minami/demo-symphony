@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name=”robots” content=”noindex”><!--検索非表示-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ザ・シンフォニーホール The Symphony Hall</title>
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap" rel="stylesheet">
+
+    <!--游ゴシック-->
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'rgu3nym',
+          scriptTimeout: 3000,
+          async: true
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/main.js"></script>   
+</head>
+
+<body>
+  <header>
+    <h1>
+      <a href="index.html"><img src="assets/img/header/logo-gd.png" alt="ザ・シンフォニーホール The Symphony Hall"></a>
+    </h1>
+
+    <nav>
+      <ul>
+        <li><a class="nav-ticket"><img src="assets/img/header/nav-icon1.png" alt=""><p>チケット</p></a></li>
+        <li><a class="nav-event"><img src="assets/img/header/nav-icon2.png" alt=""><p>公演</p></a></li>
+        <li><a href="page-access.html"><img src="assets/img/header/nav-icon3.png" alt=""><p>アクセス</p></a></li>
+        <li><a href="page-faq.html"><img src="assets/img/header/nav-icon4.png" alt=""><p>FAQ</p></a></li>
+        <li><a class="nav-other"><img src="assets/img/header/nav-icon5.png" alt=""><p>その他</p></a></li>
+      </ul>
+    </nav>
+
+    <!--開閉メニュー（チケット）-->
+    <div class="menu menu-ticket">
+      <div class="nav-close">
+        <img src="assets/img/header/close.png" alt="">
+      </div>
+
+      <div class="title">
+        <img src="assets/img/header/menu-icon1.png" alt="">
+        <p>チケット</p>
+      </div>
+      
+      <ul class="wrapper">
+        <li><a href="">ログインしてWEBで購入</a></li>
+        <li><a href="">新規会員登録はこちら</a></li>
+        <li><a href="page-how.html">チケット購入方法</a></li>
+      </ul>
+    </div>
+
+    <!--開閉メニュー（公演）-->
+    <div class="menu menu-event">
+      <div class="nav-close">
+        <img src="assets/img/header/close.png" alt="">
+      </div>
+
+      <div class="title">
+        <img src="assets/img/header/menu-icon2.png" alt="">
+        <p>公演</p>
+      </div>
+      
+      <ul class="wrapper">
+        <li><a href="archive-event.html">公演一覧から探す</a></li>
+        <li><a href="page-calendar.html">カレンダーから探す</a></li>
+      </ul>
+    </div>
+
+    <!--開閉メニュー（その他）-->
+    <div class="menu menu-other">
+      <div class="nav-close">
+        <img src="assets/img/header/close.png" alt="">
+      </div>
+
+      <div class="title">
+        <p>その他</p>
+      </div>
+      
+      <ul class="wrapper">
+        <li><a href="archive-news.html">お知らせ</a></li>
+        <li><a href="page-seat.html">座席表</a></li>
+        <li><a href="page-rental.html">貸館ご利用について</a></li>
+        <li><a href="">ログイン・新規会員登録</a></li>
+        <li><a href="page-lp.html">当ホールの魅力</a></li>
+        <li><a href="archive-blog.html">ブログ</a></li>
+        <li><a href="archive-pdf.html">会報誌PDF</a></li>
+      </ul>
+
+      <div class="footer-nav wrapper">
+        <a href="page-company.html">会社概要</a>
+        <a href="page-contact.html">お問い合わせ</a>
+        <a href="page-sitemap.html">サイトマップ</a>
+        <a href="page-barrierfree.html">バリアフリー</a>
+        <a href="page-privacy.html">プライバシーポリシー</a>
+      </div>
+
+      <div class="sns-nav wrapper">
+        <a href=""><img src="assets/img/header/sns-youtube.png" alt=""></a>
+        <a href=""><img src="assets/img/header/sns-x.png" alt=""></a>
+        <a href=""><img src="assets/img/header/sns-tiktok.png" alt=""></a>
+        <a href=""><img src="assets/img/header/sns-fb.png" alt=""></a>
+      </div>
+    </div>
+  </header>
+
+  <main id="index">
+    <!-- MV -->
+    <div class="mv">
+      <ul class="slideshow">
+        <li class="img1"></li>
+        <li class="img2"></li>
+        <li class="img3"></li>
+        <li class="img4"></li>
+      </ul>
+
+      <div class="kirakira wrapper">
+        <img src="assets/img/index/kirakira1.png" alt="">
+        <img src="assets/img/index/kirakira1.png" alt="">
+        <img src="assets/img/index/kirakira1.png" alt="">
+        <img src="assets/img/index/kirakira1.png" alt="">
+
+        <img src="assets/img/index/kirakira2.png" alt="">
+        <img src="assets/img/index/kirakira2.png" alt="">
+        <img src="assets/img/index/kirakira2.png" alt="">
+        <img src="assets/img/index/kirakira2.png" alt="">
+        <img src="assets/img/index/kirakira2.png" alt="">
+        <img src="assets/img/index/kirakira2.png" alt="">
+      </div>
+
+      <div class="logo">
+        <img src="assets/img/index/logo-wh.png" alt="">
+        <p>贅沢な空間と響き。</p>
+      </div>
+
+      <div class="circle">
+        <img src="assets/img/index/mv-link.png" alt="">  
+        <a href="page-lp.html">ホールの魅力</a>
+      </div>
+    </div>
+
+    <!-- NEWS -->
+    <section id="news" class="wrapper">
+      <div class="flex">
+        <article>
+          <div class="info">
+            <time>2024年2月9日</time>
+            <p class="category">公演情報</p>
+            <p class="category new">NEW</p>
+          </div>
+
+          <h3><a href="single-news.html">2/3(土)「横坂 源 チェロ・リサイタル 2024」出演者変更のお知らせ</a></h3>
+        </article>
+
+        <article>
+          <div class="info">
+            <time>2024年2月9日</time>
+            <p class="category">公演情報</p>
+          </div>
+
+          <h3><a href="single-news.html">1/7（日）「大阪交響楽団　第130回名曲コンサート」指揮者変更のお知らせ</a></h3>
+        </article>
+
+        <article>
+          <div class="info">
+            <time>2024年2月9日</time>
+            <p class="category">公演情報</p>
+          </div>
+
+          <h3><a href="single-news.html">【1月25日～1月31日】ザ・シンフォニー チケットセンター 営業時間につきまして</a></h3>
+        </article>
+      </div>
+
+      <a href="archive-news.html" class="button">お知らせ一覧</a>
+    </section>
+
+    <!-- タブ切り替え -->
+    <ul class="tab">
+      <li class="tab-pickup active">おすすめ公演</li>
+      <li class="tab-calendar">公演カレンダー</li>
+    </ul>
+
+    <div class="bg-white">
+    <!-- おすすめ公演 -->
+    <section id="pickup" class="active">
+        <div class="wrapper">
+            <h2>
+              <img src="assets/img/index/ttl-pickup.png" alt="">
+              <p>おすすめ公演</p>
+            </h2>
+            
+            <ul class="slick-pickup">
+              <li>
+                <article>
+                  <img src="assets/img/post/event-thumbnail.png" alt="">
+                  <p class="ticket">Ticket</p>
+                  <time>2023年10月21日(土) 15:00 開演</time>
+                  <h3><a href="single-event.html">The Symphony Hall プラチナコンサート 世界の巨匠とともに 2023　チューリッヒ・トーンハレ管弦楽団　大阪公演</a></h3>
+                </article>
+              </li>
+
+              <li>
+                <article>
+                  <img src="assets/img/post/event-thumbnail.png" alt="">
+                  <p class="ticket">Ticket</p>
+                  <time>2023年10月21日(土) 15:00 開演</time>
+                  <h3><a href="single-event.html">The Symphony Hall プラチナコンサート 世界の巨匠とともに 2023　チューリッヒ・トーンハレ管弦楽団　大阪公演</a></h3>
+                </article>
+              </li>
+
+              <li>
+                <article>
+                  <img src="assets/img/post/event-thumbnail.png" alt="">
+                  <p class="ticket">Ticket</p>
+                  <time>2023年10月21日(土) 15:00 開演</time>
+                  <h3><a href="single-event.html">The Symphony Hall プラチナコンサート 世界の巨匠とともに 2023　チューリッヒ・トーンハレ管弦楽団　大阪公演</a></h3>
+                </article>
+              </li>
+
+              <li>
+                <article>
+                  <img src="assets/img/post/event-thumbnail.png" alt="">
+                  <p class="ticket">Ticket</p>
+                  <time>2023年10月21日(土) 15:00 開演</time>
+                  <h3><a href="single-event.html">The Symphony Hall プラチナコンサート 世界の巨匠とともに 2023　チューリッヒ・トーンハレ管弦楽団　大阪公演</a></h3>
+                </article>
+              </li>
+
+              <li>
+                <article>
+                  <img src="assets/img/post/event-thumbnail.png" alt="">
+                  <p class="ticket">Ticket</p>
+                  <time>2023年10月21日(土) 15:00 開演</time>
+                  <h3><a href="single-event.html">The Symphony Hall プラチナコンサート 世界の巨匠とともに 2023　チューリッヒ・トーンハレ管弦楽団　大阪公演</a></h3>
+                </article>
+              </li>
+
+              <li>
+                <article>
+                  <img src="assets/img/post/event-thumbnail.png" alt="">
+                  <p class="ticket">Ticket</p>
+                  <time>2023年10月21日(土) 15:00 開演</time>
+                  <h3><a href="single-event.html">The Symphony Hall プラチナコンサート 世界の巨匠とともに 2023　チューリッヒ・トーンハレ管弦楽団　大阪公演</a></h3>
+                </article>
+              </li>
+
+              <li>
+                <article>
+                  <img src="assets/img/post/event-thumbnail.png" alt="">
+                  <p class="ticket">Ticket</p>
+                  <time>2023年10月21日(土) 15:00 開演</time>
+                  <h3><a href="single-event.html">The Symphony Hall プラチナコンサート 世界の巨匠とともに 2023　チューリッヒ・トーンハレ管弦楽団　大阪公演</a></h3>
+                </article>
+              </li>
+
+              <li>
+                <article>
+                  <img src="assets/img/post/event-thumbnail.png" alt="">
+                  <p class="ticket">Ticket</p>
+                  <time>2023年10月21日(土) 15:00 開演</time>
+                  <h3><a href="single-event.html">The Symphony Hall プラチナコンサート 世界の巨匠とともに 2023　チューリッヒ・トーンハレ管弦楽団　大阪公演</a></h3>
+                </article>
+              </li>
+            </ul>
+            
+            <a href="archive-event.html" class="button bg">公演一覧</a>
+        </div>
+    </section>
+
+
+
+    <!-- カレンダー -->
+    <section id="calendar">
+      <div class="wrapper">
+        <h2>
+          <img src="assets/img/index/ttl-calendar.png" alt="">
+          <p>公演カレンダー</p>
+        </h2>
+
+        <div class="flex">
+        <div class="left">
+          
+          <div class="month">
+            <p>8月</p>
+            <a href="">翌月 ></a>
+          </div>
+
+          <table class="calendar">
+            <thead>
+              <tr>
+                <th>月</th>
+                <th>火</th>
+                <th>水</th>
+                <th>木</th>
+                <th>金</th>
+                <th>土</th>
+                <th>日</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td class="blank"></td>
+                <td>1</td>
+                <td class="have-event">2</td>
+                <td class="have-event">3</td>
+                <td>4</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>6</td>
+                <td class="have-event">7</td>
+                <td>8</td>
+                <td>9</td>
+                <td class="have-event select">10</td>
+                <td class="have-event host">11</td>
+              </tr>
+              <tr>
+                <td class="have-event">12</td>
+                <td>13</td>
+                <td class="have-event">14</td>
+                <td class="have-event host">15</td>
+                <td class="have-event">16</td>
+                <td class="have-event">17</td>
+                <td>18</td>
+              </tr>
+              <tr>
+                <td>19</td>
+                <td>20</td>
+                <td class="have-event">21</td>
+                <td>22</td>
+                <td class="have-event">23</td>
+                <td class="have-event host">24</td>
+                <td class="have-event">25</td>
+              </tr>
+              <tr>
+                <td class="have-event">26</td>
+                <td>27</td>
+                <td>28</td>
+                <td class="have-event">29</td>
+                <td class="have-event">30</td>
+                <td class="have-event">31</td>
+                <td class="blank"></td>
+              </tr>
+            </tbody>
+          </table>
+
+          <p class="color-guide">主催</p>
+        </div>
+          
+        <div class="right">
+          <div class="fukidashi">
+            <p class="ticket">Ticket</p>
+            <time>2023年10月21日(土) 15:00 開演</time>
+            <h3><a href="single-event.html">The Symphony Hall プラチナコンサート 世界の巨匠とともに 2023　チューリッヒ・トーンハレ管弦楽団　大阪公演</a></h3>
+            <a href="single-event.html" class="button bg">公演詳細</a>
+          </div>
+  
+        </div>
+
+        </div><!--flex-->
+      </div>
+    </section>
+
+    <div class="search-form wrapper">
+      <form role="search" action="#/search" method="get" noindex>
+        <input class="word" type="search" placeholder="キーワードで検索" />
+        <input class="submit" type="image" src="assets/img/index/search.png" width="50px" height="50px" />
+      </form>
+    </div>
+    </div>
+
+    <!-- リンク -->
+    <section id="link">
+        <ul>
+            <li><a href="page-access.html">
+              <img src="assets/img/index/link1.png" alt="">
+              <p>アクセス</p>
+            </a></li>
+            <li><a href="page-seat.html">
+              <img src="assets/img/index/link2.png" alt="">
+              <p>座席表</p>
+            </a></li>
+            <li><a href="page-faq.html">
+              <img src="assets/img/index/link3.png" alt="">
+              <p>よくある質問</p>
+            </a></li>
+            <li><a href="page-rental.html">
+              <img src="assets/img/index/link4.png" alt="">
+              <p>貸館ご利用の方</p>
+            </a></li>
+        </ul>
+    </section>
+
+    <div class="deco-img1"></div>
+
+    <!-- 会員 -->
+    <section id="member">
+      <div class="line">
+        <div class="wrapper">
+            <h2>
+              <img src="assets/img/index/ttl-member.png" alt="">
+              <p>会員特典</p>
+            </h2>
+
+            <div class="flex">
+              <img src="assets/img/index/member-thumbnail.png" alt="">
+
+              <div class="right">
+                <div class="text">
+                  <span>01</span>
+                  <p>詳しい公演情報・インタビューなどが楽しめる会報誌シンフォニアを郵送いたします。</p>
+                  <span>02</span>
+                  <p>公演チケットを先行予約でお求めいただけます。</p>
+                </div>
+
+                <a href="" class="button">ログイン</a>
+                <a href="" class="button">新規会員登録</a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ブログ -->
+    <section id="blog">
+        <div class="flex wrapper">
+            <h2>
+              <img src="assets/img/index/ttl-blog.png" alt="">
+              <p>ブログ</p>
+            </h2>
+            
+            <article>
+              <img src="assets/img/post/event-thumbnail.png" alt="">
+
+              <div class="right">
+                <div class="info">
+                  <time>2024年2月9日</time>
+                  <p class="category">シンフォニア</p>
+                </div>
+
+                <h3><a href="single-blog.html">タイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</a></h3>
+              </div>
+            </article>
+
+            <a href="archive-blog.html" class="button bg">ブログ一覧</a>
+        </div>
+    </section>
+
+    <!-- SNS -->
+    <section id="sns">
+      <div class="line wrapper">
+        <div class="flex">
+            <h2><img src="assets/img/index/ttl-sns.png" alt=""></h2>
+            <p>各SNSで最新情報や特別コンテンツをお楽しみいただけます。</p>
+            <div class="icon">
+                <a href=""><img src="assets/img/header/sns-youtube.png" alt=""></a>
+                <a href=""><img src="assets/img/header/sns-x.png" alt=""></a>
+                <a href=""><img src="assets/img/header/sns-tiktok.png" alt=""></a>
+                <a href=""><img src="assets/img/header/sns-fb.png" alt=""></a>
+            </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- バナー -->
+    <section id="banner">
+        <div class="flex wrapper">
+            <a href=""><img src="assets/img/index/banner1.png" alt=""></a>
+            <a href=""><img src="assets/img/index/banner2.png" alt=""></a>
+            <a href=""><img src="assets/img/index/banner3.png" alt=""></a>
+        </div>
+    </section>
+
+    <div class="deco-img2"></div>
+
+  </main>
+
+  
+  <div class="margintop0">
+    <footer>
+      <a id="scroll-top">Top</a>
+  
+      <img src="assets/img/index/logo-icon.png" alt="">
+  
+      <ul>
+          <li><a href="page-company.html">会社概要</a></li>
+          <li><a href="page-contact.html">お問い合わせ</a></li>
+          <li><a href="page-sitemap.html">サイトマップ</a></li>
+          <li><a href="page-barrierfree.html">バリアフリー</a></li>
+          <li><a href="page-privacy.html">プライバシーポリシー</a></li>
+      </ul>
+  
+      <small>Copyright &copy; The Symphony Hall All rights reserved</small>
+    </footer>
+  </div> 
+</body>
+</html>

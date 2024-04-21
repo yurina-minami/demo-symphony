@@ -1,0 +1,517 @@
+@charset "UTF-8";
+@use "../foundation/var";
+@use "../foundation/mixin";
+
+#index {
+    background-color: var.$red;
+    overflow: hidden;
+
+    /*---------- mv -----------*/
+    /* CSSアニメはindex-animation.scssにあります */
+    .mv {
+        width: 100%;
+        height: 100vh;
+        color: white;
+        text-align: center;
+        position: relative;
+
+        .logo {
+            width: 250px;
+            position: absolute;
+            top: 50vh;
+            left: calc(50% - 125px);
+        }
+
+        .circle {
+            a, img {
+                width: 130px;
+                position: absolute;
+                bottom: -20px;
+                right: -10px;
+                transition: .5s;
+    
+                @include mixin.pc {
+                    bottom: 20px;
+                    right: 10px;
+                }
+            }
+
+            a {
+                display: block;
+                padding: 50px 0;
+                font-size: 16px;
+            }
+
+            &:hover {
+                a {
+                    width: 150px;
+                    padding: 60px 0;
+                }
+            }
+        }
+    }
+
+    /*---------- news -----------*/
+    #news {
+        padding: 60px 0;
+
+        .flex {
+            display: flex;
+            flex-direction: column;
+
+            @include mixin.pc {
+                flex-direction: row;
+                margin-bottom: 20px;
+            }
+
+            article {
+                padding: 20px 0;
+                border-bottom: solid 1px var.$gold;
+                line-height: 1.2;
+
+                @include mixin.pc {
+                    width: 33%;
+                    padding: 0 20px;
+                    border-bottom: none;
+                    border-right: solid 1px var.$gold;
+                }
+
+                &:nth-child(3) {
+                    border-bottom: none;
+    
+                    @include mixin.pc {
+                        border-right: none;
+                    }
+                }
+
+                .info {
+                    display: flex;
+                    gap: 10px;
+                    margin-bottom: 10px;
+    
+                    time {
+                        color: white;
+                        font-size: 18px;
+                    }
+    
+                    .category {
+                        background-color: var.$gold;
+                        color: var.$red;
+                        font-size: 14px;
+                        height: 24px;
+                        padding: 4px 10px;
+    
+                        /* new のCSSアニメはindex-animation.scssにあります*/
+                    }
+                }
+    
+                a {
+                    font-size: 16px;
+                    color: white;
+
+                    &:hover {
+                        color: var.$gold;
+                    }
+                }
+            }
+        }
+    }
+
+    /*------- タブ切り替え ---------*/
+    .tab {
+        display: flex;
+        justify-content: space-between;
+        text-align: center;
+        margin-bottom: -1px;
+
+        @include mixin.pc {
+            display: none;
+        }
+
+        li {
+            width: 49%;
+            padding: 10px 0;
+            border: solid 1px var.$gold;
+            color: var.$gold;
+            font-size: 18px;
+
+            &.active {
+                background-color: white;
+                border: none;
+            }
+        }
+    }
+
+    /*---------- pickup,calendar共通 -----------*/
+    .bg-white {
+        background-color: white;
+        padding: 50px 0 80px;
+    }
+
+    #pickup, #calendar {
+        display: none;
+
+        @include mixin.pc {
+            display: block;
+        }
+
+        &.active {
+            display: block;
+            animation: tab-opacity .5s forwards;
+
+            @keyframes tab-opacity{
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+        }
+
+        /* 公演情報の共通CSS はevent.scssにもあります */
+    }
+
+    /*---------- pickup -----------*/
+    /* slick はindex-animation.scssにあります */
+    #pickup {
+        h2 img {
+            width: 140px;
+        } 
+
+        @include mixin.pc {
+            margin-bottom: 80px;
+            padding-bottom: 80px;
+            border-bottom: solid 2px var.$gold;
+            position: relative;
+
+            /* 線の装飾 */
+            &::before, &::after {
+                content: "";
+                width: 100%;
+                height: 1px;
+                background-color: var.$gold;
+                position: absolute;
+            }
+
+            &::before {
+                bottom: -8px;
+            }
+
+            &::after {
+                bottom: 5px;
+            }
+        }
+    }
+
+
+    /*---------- calendar -----------*/
+    #calendar {
+        h2 img {
+            width: 180px;
+        }
+    }
+
+    /*---------- link -----------*/
+    #link {
+        background-color: white;
+        
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1px;
+
+            li {
+                width: calc(50% - 0.5px);
+                background-color: var.$red;
+                padding: 20px;
+                text-align: center;
+
+                @include mixin.tab {
+                    width: calc(25% - 1px);
+                    padding: 30px 20px;
+                }
+
+                a {
+                    display: block;
+                    color: white;
+
+                    img {
+                        height: 50px;
+                        width: auto;
+                    }
+
+                    @include mixin.pc {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 10px;
+
+                        img {
+                            height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    /*---------- member -----------*/
+    #member {
+        background-color: #515A36;
+        padding: 10px 0;
+
+        .line {
+            border-top: solid 1px var.$gold;
+            border-bottom: solid 1px var.$gold;
+            padding: 50px 0;
+        }
+
+        .wrapper {
+            @include mixin.tab {
+                width: 450px;
+            }
+
+            @include mixin.pc {
+                width: 1000px;
+            }
+        }
+
+        h2 img {
+            width: 200px;
+        }
+
+        .flex {
+            @include mixin.pc {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                img {
+                    width: 550px;
+                }
+
+                .right {
+                    width: 350px;
+                }
+            }
+
+            img {
+                margin: 20px 0;
+            }
+
+            .right {
+                .text {
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    span {
+                        width: 15%;
+                        color: var.$gold;
+                        font-size: 30px;
+                        font-family: var.$en;
+                    }
+
+                    p {
+                        width: 85%;
+                        margin-bottom: 20px;
+                        color: white;
+                    }
+                }
+
+                .button {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+
+    /*---------- blog -----------*/
+    #blog {
+        background-image: url(../img/index/blog-bg.png);
+        background-size: cover;
+        background-position: center;
+        padding: 50px 0 80px;
+
+        .wrapper {
+            @include mixin.tab {
+                width: 450px;
+            }
+
+            @include mixin.pc {
+                width: 1000px;
+            }
+        }
+
+        @include mixin.pc {
+            padding: 50px 0;
+            
+            .flex {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                h2 {
+                    margin-right: 20px;
+                }
+
+                .button {
+                    width: 300px;
+                    margin: 0;
+                }
+            }
+        }
+
+        h2 img {
+            width: 90px;          
+        }
+
+        article {
+            line-height: 1.2;
+            margin: 30px 0;
+
+            @include mixin.pc {
+                display: flex;
+                align-items: center;
+                gap: 30px;
+
+                img {
+                    width: 200px;
+                }
+
+                .right {
+                    width: 260px;
+                }
+            }
+
+            .info {
+                display: flex;
+                gap: 10px;
+                margin: 30px 0 10px;
+
+                @include mixin.pc {
+                    margin: 10px 0;
+                }
+
+                time {
+                    color: white;
+                }
+
+                .category {
+                    background-color: var.$gold;
+                    font-size: 12px;
+                    height: 22px;
+                    padding: 4px 10px;
+                }
+            }
+
+            a {
+                font-size: 16px;
+                color: white;
+            }
+        }
+
+        .button {
+            color: black;
+        }
+    }
+
+    /*---------- sns -----------*/
+    #sns {
+        background-color: #212121;
+        padding-top: 50px;
+
+        .line {
+            border-top: solid 1px var.$gold;
+            border-bottom: solid 1px var.$gold;
+            padding: 8px 0;
+        }
+
+        .flex {
+            border-top: solid 1px var.$gold;
+            border-bottom: solid 1px var.$gold;
+            padding: 50px 20px 20px;
+
+            @include mixin.tab {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            @include mixin.pc {
+                flex-direction: row;
+                justify-content: space-between;
+                padding: 40px 50px 20px;
+
+                p {
+                    width: 400px;
+                }
+            }
+
+            h2 img {
+                width: 80px;
+            }
+
+            p {
+                color: var.$gold;
+            }
+    
+            .icon {
+                display: flex;
+                gap: 30px;
+                margin: 20px 0;
+
+                @include mixin.tab {
+                    width: 300px;
+                }
+            }
+        }
+    }
+
+    /*---------- banner -----------*/
+    #banner {
+        background-color: #212121;
+        padding: 80px 0;
+
+        .flex {
+            img {
+                margin-bottom: 20px;
+            }
+
+            @include mixin.tab {
+                width: 450px;
+            }
+
+            @include mixin.pc {
+                width: 1000px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+
+                a {
+                    width: 48%;
+                }
+            }
+        }
+    }
+
+    /*---------- deco-img -----------*/
+    .deco-img1, .deco-img2 {
+        height: 100px;
+        background-size: cover;
+        background-position: center;
+
+        @include mixin.pc {
+            height: 200px;
+        }
+    }
+
+    .deco-img1 {
+        background-image: url(../img/index/deco-img1.png);
+    }
+
+    .deco-img2 {
+        background-image: url(../img/index/deco-img2.png);
+    }
+}

@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+@use "foundation/reset";
+@use "foundation/slick";
+@use "foundation/slick-theme";
+@use "foundation/base";
+
+@use "component//button";
+@use "component/header";
+@use "component/footer";
+@use "component/title";
+@use "component/calendar";
+@use "component/searchform";
+@use "component/contact";
+
+@use "page/index";
+@use "page/index-animation";
+@use "page/lp";
+@use "page/faq";
+@use "page/how";
+@use "page/seat";
+@use "page/company";
+@use "page/rental";
+@use "page/blog";
+@use "page/news";
+@use "page/event";
+@use "page/access";
+@use "page/others";

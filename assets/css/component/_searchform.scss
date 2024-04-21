@@ -1,0 +1,33 @@
+@charset "UTF-8";
+@use "../foundation/var";
+@use "../foundation/mixin";
+
+.search-form {
+    border: solid 1px var.$gold;
+    margin-top: 50px;
+    padding: 8px 15px;
+
+    form {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        input {
+            display: block;
+        }
+    }
+
+
+    input.word {
+        width: calc(100% - 50px);
+
+        &::placeholder {
+            color: var.$gold;
+        }
+    }
+
+    input.submit {
+        width: 30px;
+        height: 30px;
+    }
+}

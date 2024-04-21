@@ -1,0 +1,344 @@
+@charset "UTF-8";
+@use "../foundation/var";
+@use "../foundation/mixin";
+
+/* mv, newsのnew, slick がこのファイルにあります */
+
+#index {
+    /*---------- mv -----------*/
+    .mv {
+        .slideshow {
+            li {
+                animation: slideshow 20s infinite;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100vh;
+                background-size: cover;
+                background-position: center;
+                opacity: 0;
+
+                &.img1 {
+                    background-image: url(../img/index/mv1.png);
+                }
+
+                &.img2 {
+                    background-image: url(../img/index/mv2.png);
+                    animation-delay: 5s;
+                }
+
+                &.img3 {
+                    background-image: url(../img/index/mv3.png);
+                    animation-delay: 10s;
+                }
+
+                &.img4 {
+                    background-image: url(../img/index/mv4.png);
+                    animation-delay: 15s;
+                }
+
+                @keyframes slideshow {
+                    0% {
+                        opacity: 0;
+                    }
+                    15% {
+                        opacity: 1;
+                    }
+                    30% {
+                        opacity: 1;
+                    }
+                    45% {
+                        opacity: 0;
+                    }
+                    100% {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+
+        .kirakira {
+            img {
+                width: 100px;
+                position: absolute;
+                animation: kirakira-opacity 2s;
+                animation-delay: 1s;
+                opacity: 0;
+
+
+                &:nth-child(1) {
+                    top: 50vh;
+                    left: 40%;
+
+                    @include mixin.pc {
+                        left: 45%;
+                    }
+                }
+
+                &:nth-child(2) {
+                    width: 80px;
+                    top: 45vh;
+                    left: 70%;
+                    animation-delay: 1.2s;
+
+                    @include mixin.pc {
+                        left: 55%;
+                    }
+                }
+
+                &:nth-child(3) {
+                    top: 40vh;
+                    left: 25%;
+                    animation-delay: 1.4s;
+
+                    @include mixin.pc {
+                        left: 40%;
+                    }
+                }
+
+                &:nth-child(4) {
+                    width: 60px;
+                    top: 52vh;
+                    left: 15%;
+                    animation-delay: 1.6s;
+
+                    @include mixin.pc {
+                        left: 38%;
+                    }
+                }
+
+                &:nth-child(5) {
+                    top: 42vh;
+                    left: 55%;
+
+                    @include mixin.pc {
+                        left: 50%;
+                    }
+                }
+
+                &:nth-child(6) {
+                    width: 80px;
+                    top: 45vh;
+                    left: 5%;
+                    animation-delay: 1.1s;
+
+                    @include mixin.pc {
+                        left: 35%;
+                    }
+                }
+
+                &:nth-child(7) {
+                    width: 60px;
+                    top: 52vh;
+                    left: 60%;
+                    animation-delay: 1.3s;
+
+                    @include mixin.pc {
+                        left: 52%;
+                    }
+                }
+
+
+                &:nth-child(8) {
+                    width: 50px;
+                    top: 54vh;
+                    left: 80%;
+
+                    @include mixin.pc {
+                        left: 58%;
+                    }
+                }
+
+                &:nth-child(9) {
+                    width: 50px;
+                    top: 54vh;
+                    left: 30%;
+                    animation-delay: 1.5s;
+
+                    @include mixin.pc {
+                        left: 42%;
+                    }
+                }
+
+                &:nth-child(10) {
+                    width: 50px;
+                    top: 46vh;
+                    left: 45%;
+                    animation-delay: 1.7s;
+
+                    @include mixin.pc {
+                        left: 46%;
+                    }
+                }
+
+                @keyframes kirakira-opacity {
+                    0% {
+                        opacity: 0;
+                    }
+                    30% {
+                        opacity: .8;
+                    }
+                    60% {
+                        opacity: .8;
+                    }
+                    100% {
+                        opacity: 0;
+                    }
+                }
+            }
+        }
+
+        .logo {
+            opacity: 0;
+            animation: logo-opacity 2s forwards;
+            animation-delay: 2s;
+
+            @keyframes logo-opacity {
+                0% {
+                    opacity: 0;
+                }
+                100% {
+                    opacity: 1;
+                }
+            }
+        }
+
+        .circle {
+            img {
+                animation: rotation 20s linear infinite;
+
+                @keyframes rotation{
+                    0%{ transform:rotate(0);}
+                    100%{ transform:rotate(360deg); }
+                }
+            }
+
+            &:hover {
+                img {
+                    animation: rotate-reverse 20s linear infinite;
+                    width: 150px;
+
+                    @keyframes rotate-reverse {
+                        0%{ transform:rotate(0);}
+                        100%{ transform:rotate(-360deg); }
+                    }
+                }
+            }
+        }
+    }
+
+    /*---------- news -----------*/
+    #news {
+        .category {
+            &.new {
+                background: linear-gradient(
+                -45deg,
+                white 50%,
+                var.$gold 60%,
+                white 70%
+                );
+                background-size: 600% 100%;
+                animation: new-shine 5s infinite;
+                animation-timing-function: linear;
+
+                @keyframes new-shine {
+                    0% {
+                      background-position-x: 100%;
+                    }
+                    25% {
+                        transform: translateY(-4px);
+                    }
+                    50% {
+                      background-position-x: 0%;
+                      transform: translateY(0px);
+                    }
+                    75% {
+                        transform: translateY(-4px);
+                    }
+                    100% {
+                        background-position-x: -100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/*---------- slickカスタマイズ -----------*/
+    #pickup {
+        .slick-pickup {
+            .slick-dots {
+                bottom: -40px;
+                pointer-events: none;
+
+                @include mixin.pc {
+                    width: 380px;
+                    bottom: -60px;
+                }
+
+                li {
+                    width: 10px;
+                    height: 10px;
+                }
+                
+                li button {
+                    border: solid 1px var.$gold;
+                    border-radius: 50%;
+                    width: 5px;
+                    height: 5px;
+                    padding: 0;
+                }
+
+                .slick-active {
+                    button {
+                        background-color: var.$gold;
+                        width: 10px;
+                        height: 10px;
+                    }
+                }
+            }
+
+            .slick-prev, .slick-next {
+                border: solid 1px var.$gold;
+                border-radius: 50%;
+                width: 50px;
+                height: 50px;
+                top: calc(100% + 30px);
+                background-size: cover;
+
+                &::before {
+                    content: "";
+                }
+            }
+
+            .slick-prev {
+                left: 0;
+                background-image: url(../img/index/arrow-prev.png);
+
+                @include mixin.pc {
+                    left: 20px;
+                    top: calc(100% + 50px);
+                }
+            }
+
+            .slick-next {
+                right: 0;
+                background-image: url(../img/index/arrow-next.png);
+
+                @include mixin.pc {
+                    right: 650px;
+                    top: calc(100% + 50px);
+                }
+            }
+        }
+
+        .button {
+            margin-top: 80px;
+
+            @include mixin.pc {
+                margin: 0 20px auto auto;
+                width: 300px;
+            }
+        }
+    }

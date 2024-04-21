@@ -1,0 +1,38 @@
+@charset "UTF-8";
+@use "../foundation/var";
+@use "../foundation/mixin";
+
+#page-company {
+        dl {
+            display: flex;
+            flex-wrap: wrap;
+            line-height: 1.5;
+            border: 0.5px solid black;
+
+            dt, dd {
+                border: 0.5px solid black;
+                padding: 10px;
+
+                @include mixin.tab {
+                    padding: 30px;
+                }
+            }
+    
+            dt {
+                width: 35%; 
+                background-color: var.$gold;
+
+                @include mixin.pc {
+                    width: 20%;
+                }
+            }
+    
+            dd {
+                width: 65%;
+
+                @include mixin.pc {
+                    width: 80%;
+                }
+            }
+        }    
+}

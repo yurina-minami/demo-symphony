@@ -1,0 +1,165 @@
+@charset "UTF-8";
+@use "../foundation/var";
+@use "../foundation/mixin";
+
+table.calendar {
+    border: solid 1.5px var.$gold;
+    border-collapse: collapse;
+    width: 100%;
+    text-align: center;
+
+    @include mixin.pc {
+        width: 500px;
+    }
+
+    th, td {
+        border: solid 1px var.$beige;
+    }
+
+    th {
+        color: var.$gold;
+        font-size: 14px;
+    }
+
+    td {
+        font-family: var.$en;
+        background-color: var.$beige;
+        border: solid 1px white;
+        color: white;
+        padding: 10px;
+
+        @include mixin.pc {
+            font-size: 24px;
+        }
+
+        &.blank {
+            background-color: white;
+            border: solid 1px var.$beige;
+        }
+
+        &.have-event {
+            background-color: var.$gold;
+            border: solid 1px var.$beige;
+        }
+
+        &.host {
+            background-color: #968D75;
+        }
+
+        &.select {
+            position: relative;
+
+            &::after {
+                content: "・";
+                position: absolute;
+                bottom: -5px;
+                left: calc(50% - 0.5rem);
+
+                @include mixin.pc {
+                    font-size: 16px;
+                }
+            }
+        }
+    }
+}
+
+/*---------- calendar -----------*/
+#calendar {
+    .wrapper {
+        @include mixin.tab {
+            width: 500px;
+        }
+
+        @include mixin.pc {
+            width: 1000px;
+        }
+    }
+
+    .flex {
+        @include mixin.pc {
+            display: flex;
+            align-items: flex-start;
+            justify-content: space-between;
+        }
+    }
+
+    .month {
+        text-align: center;
+        position: relative;
+    
+        p {
+            font-size: 24px;
+            color: var.$gold;
+        }
+    
+        a {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    .color-guide {
+        padding: 5px 10px;
+
+        &::before {
+            display: inline-block;
+            content: "";
+            width: 15px;
+            height: 15px;
+            background-color: #968D75;
+            margin-right: 5px;
+        }
+    }
+
+    .fukidashi {
+            border: solid 1px var.$gold;
+            padding: 30px 20px;
+            margin-top: 20px;
+            position: relative;
+
+
+            /* 三角共通 */
+            &::before, &::after {
+                content: "";
+                position: absolute;
+                border-right: 20px solid transparent;
+                border-left: 20px solid transparent;
+                left: calc(50% - 20px);
+            }
+
+            /* 色違いの三角重ねてずらす */
+            &::before {
+                border-bottom: 20px solid var.$gold;
+                top: -20px;
+            }
+
+            &::after {
+                border-bottom: 20px solid white;
+                top: -19px;
+            }
+
+            @include mixin.tab {
+                padding: 30px 40px;
+            }
+
+            @include mixin.pc {
+                width: 450px;
+                padding: 25px 50px;
+                margin-top: 50px;
+
+
+                &::before, &::after {
+                    transform: rotate(-90deg);
+                    left: -30px;
+                    top: 50%;
+                }
+
+                &::after {
+                    left: -29px;
+                }
+            }
+        
+            /* 公演情報の共通CSS はevent.scssにもあります */
+    }
+}

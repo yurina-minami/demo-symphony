@@ -1,0 +1,112 @@
+@charset "UTF-8";
+@use "../foundation/var";
+@use "../foundation/mixin";
+
+/*-------- BLOG共通 --------*/
+#archive-blog, #single-blog {
+    article {
+        line-height: 1.2;
+        margin: 30px 0 50px;
+
+        .info {
+            display: flex;
+            gap: 10px;
+            margin: 10px 0;
+
+            .category {
+                background-color: var.$gold;
+                font-size: 12px;
+                height: 22px;
+                padding: 4px 10px;
+                color: white;
+            }
+        }
+    }
+}
+
+
+
+/*-------- 一覧ページ --------*/
+#archive-blog {
+    .category {
+        text-align: center;
+        color: var.$gold;
+
+        ul {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+
+            li {
+                border: solid 1px var.$gold;
+                padding: 0 10px;
+
+                &.active {
+                    background-color: var.$gold;
+                    color: white;
+                }
+            }
+        }
+    }
+
+    .posts {
+        margin-top: 50px;
+
+        @include mixin.tab {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            li {
+                width: 45%;
+            }
+        }
+        
+        @include mixin.pc {
+            li {
+                width: 30%;
+            }
+        }
+
+        &::after{//最後の行を左寄せ
+            content:"";
+            display: block;
+            width:30%;
+        }
+
+        article {
+            h3 a {
+                font-size: 18px;
+                color: black;
+            }
+        }
+    }
+}
+
+
+/*-------- 詳細ページ --------*/
+#single-blog {
+    article {
+        h3 {
+            font-size: 24px;
+            padding-bottom: 20px;
+            border-bottom: solid 1px var.$gold;
+            margin-bottom: 30px;
+        }
+
+        .text {
+            line-height: 1.5;
+
+            img {
+                margin: 20px 0;
+            }
+
+            h4 {
+                background-color: var.$beige;
+                border-bottom: solid 1px var.$gold;
+                padding: 20px;
+                margin: 50px 0 30px;
+            }
+        }
+    }
+}

@@ -1,0 +1,180 @@
+@charset "UTF-8";
+@use "../foundation/var";
+@use "../foundation/mixin";
+
+/*-------- single-event, calendar, pickup共通 --------*/
+#single-event, #calendar, #pickup, #page-lp {
+    .slick-pickup article {
+        margin: 0 20px;
+
+        img {
+            margin-bottom: 20px;
+        }
+    }
+
+    .ticket {
+        width: 80px;
+        border: solid 1px var.$gold;
+        color: var.$gold;
+        text-align: center;
+        font-family: var.$en;
+    }
+
+    time {
+        font-size: 14px;
+    }
+
+    h3 {
+        font-size: 18px;
+        line-height: 1.5;
+        margin-bottom: 20px;
+
+        a {
+            color: black;
+
+            &:hover {
+                color: var.$gold;
+            }
+        }
+    }
+}
+
+
+/*-------- 詳細ページ --------*/
+#single-event {
+    article {
+        @include mixin.pc {
+            display: flex;
+            justify-content: space-between;
+
+            .flex-left {
+                width: 350px;
+            }
+
+            dl {
+                width: 550px;
+            }
+        }
+
+        .flex-left {
+            .button {
+                margin-top: 20px;
+            }
+
+            img {
+                margin: 20px 0 50px;
+            }
+        }
+    }
+
+    dl {
+        border-top: solid 1px var.$gold;
+
+        dt {
+            font-size: 24px;
+            color: var.$gold;
+            margin-top: 10px;
+        }
+
+        dd {
+            border-bottom: solid 1px var.$gold;
+            font-size: 16px;
+            padding-bottom: 20px;
+
+            .button {
+                margin-top: 15px;
+
+                @include mixin.pc {
+                    margin-left: 0;
+                }
+            }
+        }
+    }
+}
+
+
+/*-------- 一覧ページ --------*/
+#archive-event {
+    .month {
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: -30px;
+        font-size: 24px;
+        color: var.$gold;
+    }
+
+    .next-month {
+        display: block;
+        text-align: right;
+    }
+
+    .posts {
+        @include mixin.tab {
+            margin: auto;
+            width: 80%;
+        }
+
+        @include mixin.pc {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            width: 1000px;
+
+        }
+
+        li {
+            border: solid 1px var.$gold;
+            padding: 10px 20px 20px;
+            margin-bottom: 10px;
+            position: relative;
+
+            @include mixin.pc {
+                width: 48%;
+                margin: 20px 0;
+            }
+
+            a {
+                display: block;
+                color: black;
+    
+                article {
+                    time {
+                        font-size: 16px;
+                    }
+
+                    .flex {
+                        display: flex;
+                        align-items: flex-start;
+                        gap: 10px;
+
+                        @include mixin.pc {
+                            gap: 20px;
+                        }
+
+                        img {
+                            width: 100px;
+                            object-fit: contain;
+
+                            @include mixin.pc {
+                                width: 140px;
+                            }
+                        }
+
+                        h3 {
+                            line-height: 1.5;
+                            font-size: 16px;
+                        }
+                    }
+
+                    .ticket {
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 80px;
+                    }
+                }
+            }
+        } 
+    }
+}
+

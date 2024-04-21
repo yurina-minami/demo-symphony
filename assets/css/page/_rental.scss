@@ -1,0 +1,87 @@
+@charset "UTF-8";
+@use "../foundation/var";
+@use "../foundation/mixin";
+
+#page-rental {
+    .button {
+        font-size: 18px;
+    }
+
+    h3 {
+        text-align: center;
+        color: var.$gold;
+        font-size: 24px;    
+        margin: 80px 0 10px;
+    }
+
+    .table1, .table2 {
+        border-collapse: collapse;
+        width: 100%;
+        border: solid 1px black;
+        line-height: 1.5;
+        margin-bottom: 30px;
+
+        @include mixin.pc {
+            width: 80%;
+            margin: 0 auto 30px;
+        }
+
+        th, td {
+            border: solid 1px black;
+        }
+    }
+
+    //ホールの基本情報
+    .table1 {
+        td {
+            padding: 10px;
+
+            @include mixin.pc {
+                padding: 10px 30px;
+            }
+
+            &:nth-child(1) {
+                background-color: var.$gold;
+                width: 30%; 
+            }
+        }
+    }
+
+
+    //基本料
+    .table2 {
+        text-align: center;
+
+        th {
+            background-color: var.$gold;
+            padding: 10px;
+        }
+
+        td {
+            width: 30%;
+
+            &:nth-child(1) {
+                background-color: var.$gold;
+                text-align: left;
+                padding: 10px;
+                font-size: 16px;
+
+                @include mixin.pc {
+                    padding: 10px 50px;
+                }
+            }
+        }
+    }
+        
+    //問い合わせフォーム
+    .contact {
+        p {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .button {
+            margin-bottom: 50px;
+        }
+    }
+}

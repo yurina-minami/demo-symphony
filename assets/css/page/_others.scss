@@ -1,0 +1,96 @@
+@charset "UTF-8";
+@use "../foundation/var";
+@use "../foundation/mixin";
+
+/* archive-pdf, page-sitemap, page-privacy, がここにあります */
+
+/*---------- PDF一覧 -----------*/
+#archive-pdf {
+    .pagenation {
+        text-align: right;
+    }
+
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        li {
+            width: 45%;
+            margin: 20px 0;
+
+            @include mixin.pc {
+                width: 17%;
+            }
+
+            h3, time {
+                font-size: 18px;
+                line-height: 1.2;
+            }
+        }
+    }
+}
+
+/*---------- サイトマップ -----------*/
+#page-sitemap {
+    @include mixin.pc {
+        .flex {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .flex-item {
+                width: 45%;
+            }
+        }
+    }
+
+
+    h3 {
+        background-color: var.$beige;
+        border-bottom: solid 1px var.$gold;
+        padding: 5px 20px;
+        margin-top: 30px;
+    }
+
+    ul {
+        padding: 20px;
+
+        li {
+            list-style: disc;
+
+            a {
+                color: black;
+            }
+        }
+    }
+}
+
+/*---------- プライバシーポリシー -----------*/
+#page-privacy {
+    a img {
+        display: block;
+        width: 200px;
+        margin: 20px auto;
+    }
+
+    h3 {
+        background-color: var.$beige;
+        border-bottom: solid 1px var.$gold;
+        padding: 5px 20px;
+        margin: 50px 0 20px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+    
+    .contact {
+        margin-top: 50px;
+        text-align: center;
+
+        p {
+            margin-top: 20px;
+        }
+    }
+}

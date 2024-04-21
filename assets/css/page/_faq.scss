@@ -1,0 +1,89 @@
+@charset "UTF-8";
+@use "../foundation/var";
+@use "../foundation/mixin";
+
+@use "../component/button";
+
+#page-faq {
+    h3 {
+        text-align: center;
+        font-size: 24px;
+        margin-bottom: 10px;
+
+        &.gold {
+            color: var.$gold;
+        }
+    }
+
+    section {
+        padding-top: 150px;
+        margin-top: -100px;
+        margin-bottom: 30px;
+
+        li {
+            padding-bottom: 10px;
+            line-height: 1.5;
+
+            /*アコーディオンタイトル*/
+            .question {
+                background-color: var.$beige;
+                padding: 15px 45px;
+                position: relative;
+                cursor: pointer;
+                transition: .5s;
+
+                /*Q*/
+                h4 {
+                    position: relative;
+
+                    &::before {
+                        content:'Q';
+                        position: absolute;
+                        top: -6px;
+                        left: -30px;
+                        color: var.$gold;
+                        font-size: 24px;
+                    }
+                }
+
+                /*アイコンの＋*/
+                &::before,
+                &::after {
+                    content:'';
+                    width: 15px;
+                    height: 2px;
+                    background-color: var.$gold;
+                    position: absolute;
+                    top:48%;
+                    right: 15px;
+                }
+
+                &::after {    
+                    transform: rotate(90deg);
+                }
+
+                /*closeクラスがついたらマイナス*/
+                &.close::after {
+                    display: none;
+                }
+            }
+        }
+
+        .answer {
+            display: none;
+            background: var.$gold;
+            color: white;
+            padding: 15px 20px 15px 45px;
+            position: relative;
+
+            /*A*/
+            &::before {
+                content:'A';
+                position: absolute;
+                top: 10px;
+                left: 15px;
+                font-size: 24px;
+            }
+        }
+    }
+}

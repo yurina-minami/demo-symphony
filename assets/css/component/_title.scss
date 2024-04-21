@@ -1,0 +1,50 @@
+@charset "UTF-8";
+@use "../foundation/var";
+@use "../foundation/mixin";
+
+#index {
+    h2 {
+        text-align: center;
+
+        p {
+            font-size: 18px;
+            line-height: 1;
+            color: var.$gold;
+            margin-top: -10px;
+            margin-bottom: 20px;
+
+        }
+    }
+}
+
+.subpage-title {
+    background-color: var.$red;
+    padding: 140px 0 20px;
+    padding-left: 20px;
+    margin-bottom: 50px;
+
+    @include mixin.tab {
+        padding-left: 0;
+        margin-bottom: 80px;
+    }
+
+    @include mixin.pc {
+        padding: 120px 0 20px;
+    }
+
+    h2 {
+        color: var.$gold;
+        border-left: 1px solid var.$gold;
+        padding-left: 20px;
+        font-size: 16px;
+        line-height: 1.2;
+
+        .en {
+            font-family: var.$en;
+        }
+    
+        .ja {
+            font-size: 24px;
+        }
+    }
+}

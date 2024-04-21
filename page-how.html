@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="”robots”" content="”noindex”" />
+    <!--検索非表示-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ザ・シンフォニーホール The Symphony Hall</title>
+
+    <!--Google Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--游ゴシック-->
+    <script>
+      (function (d) {
+        var config = {
+            kitId: "rgu3nym",
+            scriptTimeout: 3000,
+            async: true,
+          },
+          h = d.documentElement,
+          t = setTimeout(function () {
+            h.className =
+              h.className.replace(/\bwf-loading\b/g, "") + " wf-inactive";
+          }, config.scriptTimeout),
+          tk = d.createElement("script"),
+          f = false,
+          s = d.getElementsByTagName("script")[0],
+          a;
+        h.className += " wf-loading";
+        tk.src = "https://use.typekit.net/" + config.kitId + ".js";
+        tk.async = true;
+        tk.onload = tk.onreadystatechange = function () {
+          a = this.readyState;
+          if (f || (a && a != "complete" && a != "loaded")) return;
+          f = true;
+          clearTimeout(t);
+          try {
+            Typekit.load(config);
+          } catch (e) {}
+        };
+        s.parentNode.insertBefore(tk, s);
+      })(document);
+    </script>
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+
+    <!--jquery-->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="assets/js/slick.js"></script>
+    <script src="assets/js/main.js"></script>
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <a href="index.html"
+          ><img
+            src="assets/img/header/logo-gd.png"
+            alt="ザ・シンフォニーホール The Symphony Hall"
+        /></a>
+      </h1>
+
+      <nav>
+        <ul>
+          <li>
+            <a class="nav-ticket"
+              ><img src="assets/img/header/nav-icon1.png" alt="" />
+              <p>チケット</p></a
+            >
+          </li>
+          <li>
+            <a class="nav-event"
+              ><img src="assets/img/header/nav-icon2.png" alt="" />
+              <p>公演</p></a
+            >
+          </li>
+          <li>
+            <a href="page-access.html"
+              ><img src="assets/img/header/nav-icon3.png" alt="" />
+              <p>アクセス</p></a
+            >
+          </li>
+          <li>
+            <a href="page-faq.html"
+              ><img src="assets/img/header/nav-icon4.png" alt="" />
+              <p>FAQ</p></a
+            >
+          </li>
+          <li>
+            <a class="nav-other"
+              ><img src="assets/img/header/nav-icon5.png" alt="" />
+              <p>その他</p></a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <!--開閉メニュー（チケット）-->
+      <div class="menu menu-ticket">
+        <div class="nav-close">
+          <img src="assets/img/header/close.png" alt="" />
+        </div>
+
+        <div class="title">
+          <img src="assets/img/header/menu-icon1.png" alt="" />
+          <p>チケット</p>
+        </div>
+
+        <ul class="wrapper">
+          <li><a href="">ログインしてWEBで購入</a></li>
+          <li><a href="">新規会員登録はこちら</a></li>
+          <li><a href="page-how.html">チケット購入方法</a></li>
+        </ul>
+      </div>
+
+      <!--開閉メニュー（公演）-->
+      <div class="menu menu-event">
+        <div class="nav-close">
+          <img src="assets/img/header/close.png" alt="" />
+        </div>
+
+        <div class="title">
+          <img src="assets/img/header/menu-icon2.png" alt="" />
+          <p>公演</p>
+        </div>
+
+        <ul class="wrapper">
+          <li><a href="archive-event.html">公演一覧から探す</a></li>
+          <li><a href="page-calendar.html">カレンダーから探す</a></li>
+        </ul>
+      </div>
+
+      <!--開閉メニュー（その他）-->
+      <div class="menu menu-other">
+        <div class="nav-close">
+          <img src="assets/img/header/close.png" alt="" />
+        </div>
+
+        <div class="title">
+          <p>その他</p>
+        </div>
+
+        <ul class="wrapper">
+          <li><a href="archive-news.html">お知らせ</a></li>
+          <li><a href="page-seat.html">座席表</a></li>
+          <li><a href="page-rental.html">貸館ご利用について</a></li>
+          <li><a href="">ログイン・新規会員登録</a></li>
+          <li><a href="page-lp.html">当ホールの魅力</a></li>
+          <li><a href="archive-blog.html">ブログ</a></li>
+          <li><a href="archive-pdf.html">会報誌PDF</a></li>
+        </ul>
+
+        <div class="footer-nav wrapper">
+          <a href="page-company.html">会社概要</a>
+          <a href="page-contact.html">お問い合わせ</a>
+          <a href="page-sitemap.html">サイトマップ</a>
+          <a href="page-barrierfree.html">バリアフリー</a>
+          <a href="page-privacy.html">プライバシーポリシー</a>
+        </div>
+
+        <div class="sns-nav wrapper">
+          <a href=""><img src="assets/img/header/sns-youtube.png" alt="" /></a>
+          <a href=""><img src="assets/img/header/sns-x.png" alt="" /></a>
+          <a href=""><img src="assets/img/header/sns-tiktok.png" alt="" /></a>
+          <a href=""><img src="assets/img/header/sns-fb.png" alt="" /></a>
+        </div>
+      </div>
+    </header>
+
+    <!------- 購入方法 --------->
+    <main id="page-how">
+      <div class="subpage-title">
+        <h2 class="wrapper">
+          <span class="en">How to buy</span><br />
+          <span class="ja">購入方法</span>
+        </h2>
+      </div>
+
+      <div class="intro wrapper">
+        <div class="left">
+          <h3>先行予約について</h3>
+          <p>
+            会員の方はお電話・WEBにて先行予約が可能です。日時につきましては、会員情報誌「シンフォニア」でご案内いたします。開始時間は販売開始日の午前10時です。先行予約の際、会員番号とご登録いただいている電話番号が必要となります。
+          </p>
+          <a class="button" href="#">会員登録はこちら</a>
+        </div>
+
+        <div class="right">
+          <h3 class="gold">手数料比較表</h3>
+
+          <table>
+            <thead>
+              <tr>
+                <th></th>
+                <th>発券</th>
+                <th>受け取り</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>WEB</td>
+                <td>¥000/枚</td>
+                <td>¥000/件</td>
+              </tr>
+              <tr>
+                <td>電話</td>
+                <td>¥000/枚</td>
+                <td>¥000/件</td>
+              </tr>
+              <tr>
+                <td>窓口</td>
+                <td>¥000/枚</td>
+                <td>¥000/件</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="tab">
+        <p>予約・購入方法は３通りあります。</p>
+        <ul>
+          <li class="tab-web active">WEB</li>
+          <li class="tab-tel">電話</li>
+          <li class="tab-window">窓口</li>
+        </ul>
+      </div>
+
+      <div class="wrapper">
+        <!------- WEB --------->
+        <section id="how-web" class="active">
+          <h3>WEBでの購入方法</h3>
+
+          <ol class="howtobuy">
+            <li>
+              <p>
+                公演詳細ページから購入ボタンをクリック。もしくは先にログインしてチケットページで公演をお選びください。
+              </p>
+              <img src="assets/img/how/web1.png" alt="" />
+            </li>
+
+            <li>
+              <p>
+                座席選択画面より『お好みの座席』を選択（クリック）してください。色のついている座席が選択可能です。画面に表示される座席詳細をご確認後、よろしければ『次へ』ボタンを押してください。
+              </p>
+              <img src="assets/img/how/web1.png" alt="" />
+            </li>
+
+            <li>
+              <p>
+                買い物かご画面が表示されます。お申し込み内容をご確認いただき、よろしければ『次へ』ボタンを押してください。
+              </p>
+              <img src="assets/img/how/web1.png" alt="" />
+            </li>
+
+            <li>
+              <p>
+                お支払・お受け取り方法を選択し、請求先、チケット発送先を確認して『次へ』ボタンをタップしてください。
+              </p>
+              <img src="assets/img/how/web1.png" alt="" />
+            </li>
+
+            <li>
+              <p>
+                お客さま情報の確認画面が表示されますので、申込内容・受取方法・発送先等を確認し『申込』ボタンをタップしてください。
+                登録メールアドレスにお申込みの確認メールが届き、申込のお手続きは完了となります。
+                クレジットカード決済を選択された方で、お申込み画面でお支払い手続きを行っていない場合は、メールに記載されたURLからお支払い手続きを行ってください。
+              </p>
+              <img src="assets/img/how/web1.png" alt="" />
+            </li>
+          </ol>
+
+          <!---- チケットのお渡し方法 ---->
+          <h3>チケットのお渡し方法</h3>
+          <ol class="howtoreceive">
+            <li>
+              <h4>郵送</h4>
+              <p>
+                送料 000円 /件<br />
+                テキストテキストテキストテキストテキストテキストテキスト。
+              </p>
+            </li>
+
+            <li>
+              <h4>コンビニで発券</h4>
+              <p>
+                発券手数料 000円 /枚<br />
+                テキストテキストテキストテキストテキストテキストテキスト。
+              </p>
+            </li>
+
+            <li>
+              <h4>電子チケット</h4>
+              <p>
+                発券手数料 000円 /枚<br />
+                テキストテキストテキストテキストテキストテキストテキスト。
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <!------- 電話 --------->
+        <section id="how-tel">
+          <h3>電話での購入方法</h3>
+
+          <ol class="howtobuy">
+            <li>
+              <p>ザ・シンフォニー チケットセンターにお電話ください。</p>
+
+              <div class="tel-number">
+                <p>ザ・シンフォニー チケットセンター</p>
+                <a href="tel:+816-6453-2333">06-6453-2333</a>
+                <small>※営業時間　10:00〜18:00</small>
+              </div>
+            </li>
+
+            <li>
+              <p>ご希望の公演を伝え、座席をお選びください。</p>
+              <a href="page-seat.html" class="button">座席表</a>
+            </li>
+
+            <li>
+              <p>コンビニ、またはクレジットカードでお支払いください。</p>
+
+              <h4>●コンビニ支払い</h4>
+              <p>
+                ご予約後、専用の払込票を送付いたします。払込票に記載されている支払期限内に、指定のコンビニエンスストアにて代金をお支払いください。<br />
+                <small>
+                  ※決済手数料220円(税込)／件<br />
+                  ※現金書留、銀行払込でのご入金はいただけませんので悪しからずご了承ください。<br />
+                  ※期日までにご入金が確認できない場合は、ご予約が無効になります。
+                </small>
+              </p>
+
+              <h4>●ご利用可能クレジットカード</h4>
+              <img class="creditcard" src="assets/img/how/pay.png" alt="" />
+            </li>
+
+            <li>
+              <p>入金確認後、チケットを郵送いたします。</p>
+              <p>
+                チケット発送はご予約・購入後、10日～2週間程度で「簡易書留」にてお届けします。<br />
+                ※シンフォニア会員の先行販売は大変多くのご予約を頂いておりますため、チケットの到着までにご予約から3週間程度のお時間を頂戴しております。
+              </p>
+
+              <div class="tel-number">
+                <p>ザ・シンフォニー チケットセンター</p>
+                <a href="tel:+816-6453-2333">06-6453-2333</a>
+                <small>※営業時間　10:00〜18:00</small>
+              </div>
+            </li>
+          </ol>
+        </section>
+
+        <!------- 窓口 --------->
+        <section id="how-window">
+          <h3>窓口での購入方法</h3>
+
+          <ol class="howtobuy">
+            <li>
+              <p>２つある窓口のいずれかにお越しください。</p>
+
+              <div class="flex">
+                <div class="left">
+                  <p>・ザ・シンフォニーチケットセンター窓口で購入</p>
+                  <img src="assets/img/how/map1.png" alt="" />
+                </div>
+                <div class="right">
+                  <p>
+                    ・コンサートご来場時に館内プレイガイドで購入（入場者のみ）
+                  </p>
+                  <img src="assets/img/how/map2.png" alt="" />
+                </div>
+              </div>
+            </li>
+
+            <li>
+              <p>ご希望の公演を伝え、座席をお選びください。</p>
+              <a href="page-seat.html" class="button">座席表</a>
+            </li>
+
+            <li>
+              <p>下記いずれかの方法でお支払いください。</p>
+
+              <p>
+                ・現金<br />
+                ・電子マネー（iD、PiTaPa）<br />
+                ・デビットカード<br />
+                ・クレジットカード
+              </p>
+              <img class="creditcard" src="assets/img/how/pay.png" alt="" />
+              <p>※発券手数料 110円(税込) /枚</p>
+            </li>
+
+            <li>
+              <p>その場でチケットをお受け取りいただけます。</p>
+            </li>
+          </ol>
+        </section>
+
+        <!------- 注意事項 --------->
+        <div class="notes">
+          <h3>注意事項</h3>
+          <p>
+            ●必ず催物名・開演日時・会場・座種・座席指定番号に間違いがないか、よくお確かめください。<br />
+            ●支払期日までに入金が確認できない場合は、ご予約が取り消されます。<br />
+            ●お客様の都合によるチケット購入後の変更（公演・券種・座席など）・キャンセルは一切できません。<br />
+            ●チケットは紛失・盗難・破損等、いかなる場合にも再発行致しません。<br />
+            ●公演により販売枚数・お支払方法を制限する場合があります。<br />
+            ●公演日が近づきますと、ご利用いただけない支払方法・チケット引取方法があります。<br />
+            ●都合により曲目・出演者その他催物内容の一部を変更する場合があります。<br />
+            ●チケットのご予約・ご購入時に決められたお支払い・チケット引取方法は変更できません。<br />
+            ●チケットの発売開始はお電話、ウェブ、窓口で異なります。詳しくは「公演スケジュール」から各公演のページをご確認ください。<br />
+            ●不可抗力等による公演の中止・延期に伴う責任および払戻し業務と告知は、興行主催者が行います。<br />
+            ●払戻しについては、興行主催者により定められた期間内に当該チケットと引換えとし、払戻し期間を過ぎた場合、またはチケットの紛失・破損・甚だしく汚損し、券面が判別しがたく引き換え不可と判断される場合には、払戻金の支払いは行いません。また、いかなる場合においても当該チケット（券面金額）以外の費用（交通費、宿泊費、通信費、送料等）の払戻しは行いません。
+          </p>
+        </div>
+      </div>
+      <!--wrapper閉じタグ-->
+    </main>
+
+    <footer>
+      <a id="scroll-top">Top</a>
+
+      <img src="assets/img/index/logo-icon.png" alt="" />
+
+      <ul>
+        <li><a href="page-company.html">会社概要</a></li>
+        <li><a href="page-contact.html">お問い合わせ</a></li>
+        <li><a href="page-sitemap.html">サイトマップ</a></li>
+        <li><a href="page-barrierfree.html">バリアフリー</a></li>
+        <li><a href="page-privacy.html">プライバシーポリシー</a></li>
+      </ul>
+
+      <small>Copyright &copy; The Symphony Hall All rights reserved</small>
+    </footer>
+  </body>
+</html>

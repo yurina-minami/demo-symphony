@@ -1,0 +1,49 @@
+@charset "UTF-8";
+@use "../foundation/var";
+@use "../foundation/mixin";
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'yu-gothic-pr6n', sans-serif;
+    font-size: 18px;
+}
+
+img {
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    color: var.$gold;
+    cursor: pointer;
+}
+
+ul li {
+    list-style: none;
+}
+
+
+/* レスポンシブ ~499, 500~699, 700~1099, 1100~ */
+.wrapper {
+    width: 90%;
+    margin: auto;
+
+    @media screen and (min-width: 500px) {
+        width: 450px;
+    }
+
+    @include mixin.tab {
+        width: 80%;
+    }
+
+    @include mixin.pc {
+        width: 1000px;
+    }
+}
+
+h2, h3 {
+    font-weight: normal;
+}

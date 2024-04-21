@@ -1,0 +1,68 @@
+@charset "UTF-8";
+@use "../foundation/var";
+@use "../foundation/mixin";
+
+footer {
+    background-color: var.$red;
+    margin-top: 80px;
+    padding: 0 20px;
+    text-align: center;
+
+    @include mixin.tab {
+        margin-top: 100px;
+    }
+
+    #scroll-top {
+        display: block;
+        padding: 20px 0 10px;
+        margin-bottom: 30px;
+        border-bottom: solid 1px var.$gold;
+        font-family: var.$en;
+        font-size: 18px;
+        position: relative;
+
+        /* 三角共通 */
+        &::before, &::after {
+            content: "";
+            position: absolute;
+            border-right: 10px solid transparent;
+            border-left: 10px solid transparent;
+            left: calc(50% - 10px);
+        }
+
+        /* 色違いの三角重ねてずらす */
+        &::before {
+            border-bottom: 10px solid var.$gold;
+            top: 10px;
+        }
+
+        &::after {
+            border-bottom: 10px solid var.$red;
+            top: 11px;
+        }
+    }
+
+    img {
+        width: 80px;
+    }
+
+    ul {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        column-gap: 20px;
+        row-gap: 5px;
+        padding: 30px 0 20px;
+        font-size: 16px;
+    }
+
+    small {
+        color: var.$gold;
+        font-family: var.$en;
+        font-size: 12px;
+    }
+}
+
+.margintop0 footer {
+    margin-top: 0;
+}
